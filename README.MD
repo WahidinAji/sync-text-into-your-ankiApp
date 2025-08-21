@@ -9,6 +9,37 @@ This extension:
 
 ---
 
+## Demo
+
+- Watch the short demo video:
+  https://youtu.be/VIDEO_ID
+  (Replace `VIDEO_ID` with the real link once available.)
+
+- Add a clickable video thumbnail (recommended for README):
+  
+    [![Watch the demo](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://youtu.be/VIDEO_ID)
+
+  Replace `VIDEO_ID` above and commit this exact Markdown to the README to show a YouTube thumbnail that links to the video.
+
+- Local demo video (MOV) in this repo:
+
+    [Download or view the MOV](documentation/Screen%20Recording%202025-08-21%20at%2023.22.28.mp4)
+
+- Include a GIF preview (optional, good for quick glance):
+  1) Place a GIF at `chrome-extension/docs/demo.gif` (you may create the `docs` folder).
+  2) Embed it in the README:
+
+        ![Demo GIF](docs/demo.gif)
+
+- Tips for creating/optimizing a GIF:
+  - Keep it short (5–15 seconds). Target file size under ~5–10 MB for fast loading.
+  - Record with any screen recorder (QuickTime on macOS, OBS, etc.).
+  - Convert/optimize: `ffmpeg` to MP4 → `gifski` or `ffmpeg -filter_complex` for palette optimization.
+  - Consider adding both: a GIF for instant preview and a thumbnail that links to the full video.
+  - If the GIF is large, consider using Git LFS or reducing resolution/frame rate.
+
+---
+
 ## Prerequisites
 
 1) Anki Desktop
@@ -139,36 +170,36 @@ If you use a custom model or different field names, see Customization.
 
 - List decks
 
-    curl localhost:8765 -X POST -d '{"action": "deckNamesAndIds", "version": 6}'
+        curl localhost:8765 -X POST -d '{"action": "deckNamesAndIds", "version": 6}'
 
   Example response:
 
-    {
-      "result": {
-        "Default": 1
-      },
-      "error": null
-    }
+        {
+          "result": {
+            "Default": 1
+          },
+          "error": null
+        }
 
   The extension primarily calls `deckNames`, and falls back to `deckNamesAndIds` if needed.
 
 - Add note (auto-save)
 
-    {
-      "action": "addNote",
-      "version": 6,
-      "params": {
-        "note": {
-          "deckName": "Default",
-          "modelName": "Basic",
-          "fields": {
-            "Front": "Front text",
-            "Back": "Back text"
-          },
-          "tags": ["web", "reading"]
+        {
+          "action": "addNote",
+          "version": 6,
+          "params": {
+            "note": {
+              "deckName": "Default",
+              "modelName": "Basic",
+              "fields": {
+                "Front": "Front text",
+                "Back": "Back text"
+              },
+              "tags": ["web", "reading"]
+            }
+          }
         }
-      }
-    }
 
 ---
 
@@ -178,6 +209,7 @@ If you use a custom model or different field names, see Customization.
 - `index.html` — Popup UI markup.
 - `style.css` — Popup UI styling.
 - `script.js` — Logic to load decks and add notes via AnkiConnect.
+- `docs/demo.gif` — Optional demo GIF referenced in the README (create the `docs` folder if needed).
 
 ---
 
