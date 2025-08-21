@@ -12,12 +12,12 @@ This extension:
 ## Demo
 
 - Watch the short demo video:
-  https://youtu.be/VIDEO_ID
+  https://youtu.be/bVnBHMiDYgQ
   (Replace `VIDEO_ID` with the real link once available.)
 
 - Add a clickable video thumbnail (recommended for README):
   
-    [![Watch the demo](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://youtu.be/VIDEO_ID)
+    [![Watch the demo](https://img.youtube.com/vi/bVnBHMiDYgQ/hqdefault.jpg)](https://youtu.be/bVnBHMiDYgQ)
 
   Replace `VIDEO_ID` above and commit this exact Markdown to the README to show a YouTube thumbnail that links to the video.
 
