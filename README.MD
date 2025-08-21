@@ -9,36 +9,9 @@ This extension:
 
 ---
 
-## Demo
+## Demo (GIF) how to use the extension
 
-- Watch the short demo video:
-  https://youtu.be/bVnBHMiDYgQ
-  (Replace `VIDEO_ID` with the real link once available.)
-
-- Add a clickable video thumbnail (recommended for README):
-  
-    [![Watch the demo](https://img.youtube.com/vi/bVnBHMiDYgQ/hqdefault.jpg)](https://youtu.be/bVnBHMiDYgQ)
-
-  Replace `VIDEO_ID` above and commit this exact Markdown to the README to show a YouTube thumbnail that links to the video.
-
-- Local demo video (MOV) in this repo:
-
-    [Download or view the MOV](documentation/Screen%20Recording%202025-08-21%20at%2023.22.28.mp4)
-
-- Include a GIF preview (optional, good for quick glance):
-  1) Place a GIF at `chrome-extension/docs/demo.gif` (you may create the `docs` folder).
-  2) Embed it in the README:
-
-        ![Demo GIF](docs/demo.gif)
-
-- Tips for creating/optimizing a GIF:
-  - Keep it short (5–15 seconds). Target file size under ~5–10 MB for fast loading.
-  - Record with any screen recorder (QuickTime on macOS, OBS, etc.).
-  - Convert/optimize: `ffmpeg` to MP4 → `gifski` or `ffmpeg -filter_complex` for palette optimization.
-  - Consider adding both: a GIF for instant preview and a thumbnail that links to the full video.
-  - If the GIF is large, consider using Git LFS or reducing resolution/frame rate.
-
----
+![Demo GIF](docs/demo.gif)
 
 ## Prerequisites
 
@@ -222,6 +195,10 @@ If you use a custom model or different field names, see Customization.
 ---
 
 ## License and Credits
+
+This project is licensed under a Custom License - see the [LICENSE](LICENSE) file for details.
+- Free for personal, educational, and non-commercial use
+- Commercial use requires licensing and payment - contact the author for commercial licensing
 
 - Built to interoperate with the excellent Anki SRS and the AnkiConnect add-on.
 - AnkiConnect is authored and maintained by its contributors: https://git.sr.ht/~foosoft/anki-connect/
