@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AnkiApp Sync</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="width: 540px; height: 300px">
+        <main id="app" class="container">
+            <h2 style="text-align: center">Sync Text Into Your AnkiApp</h2>
+
+            <section id="signedIn">
+                <form
+                    id="addCardForm"
+                    autocomplete="off"
+                    style="display: grid; gap: 8px"
+                >
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 12px;
+                        "
+                    >
+                        <div>
+                            <label for="deckSelect">Deck</label>
+                            <select id="deckSelect" required>
+                                <option value="" selected disabled>
+                                    Select a deck
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tagsInput">Tags</label>
+                            <input
+                                id="tagsInput"
+                                type="text"
+                                placeholder="comma-separated tags"
+                            />
+                        </div>
+                    </div>
+
+                    <label for="frontInput">Front</label>
+                    <textarea
+                        id="frontInput"
+                        rows="2"
+                        required
+                        placeholder="Front text"
+                    ></textarea>
+
+                    <label for="backInput">Back</label>
+                    <textarea
+                        id="backInput"
+                        rows="2"
+                        required
+                        placeholder="Back text"
+                    ></textarea>
+
+                    <div
+                        class="actions"
+                        style="text-align: center; margin-top: 8px"
+                    >
+                        <button id="addBtn" type="submit">Add</button>
+                    </div>
+                </form>
+                <div id="status" role="status" aria-live="polite">Ready.</div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
